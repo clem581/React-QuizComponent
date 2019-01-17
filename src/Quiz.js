@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 
 let quizData = require('./quiz_data.json')
 
-class Quiz extends Comment{
+class Quiz extends React.Component{
     state = {
         quiz_position: 1
     }
@@ -10,9 +10,11 @@ class Quiz extends Comment{
         return(
             <div>
                 <div className='Quizquestion'>
-                    {quizData}
+                    {quizData.quiz_questions[0].instruction_text}                    
                 </div>
             </div>
         )
     }
 }
+
+export default Quiz
